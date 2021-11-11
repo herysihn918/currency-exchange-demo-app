@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React from 'react'
+import { createStore, applyMiddleware } from 'redux'
+import { Provider, useSelector } from 'react-redux'
+import createSagaMiddleware from 'redux-saga'
+import reducer from './redux/reducer'
+import rootSaga from './redux/saga'
+import { ExchangeCard, LoadingScreen, Notification } from './components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// redux, saga settings
+const sagaMiddleware = createSagaMiddleware()
+const store = createStore(
+    reducer,
+    applyMiddleware(sagaMiddleware)
+)
+
+sagaMiddleware.run(rootSaga)
+
+const App = () => {
+    const { loading, error, message } = useSelector(state => state.saga)
+    return (
+        <>
+            <div className="flex-display flex-center full-size">
+                <ExchangeCard />
+            </div>
+            { loading ? <LoadingScreen /> : null }
+            { error ? <Notification message={message} /> : null}
+        </>
+    );
 }
 
-export default App;
+export default () => <Provider store={store}><App /></Provider>
