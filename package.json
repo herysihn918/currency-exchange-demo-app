@@ -2,7 +2,7 @@
   "name": "test-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://herysihn918.github.io/currency-exchange-demo",
+  "homepage": "https://herysihn918.github.io/currency-exchange-demo-app/",
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",
     "@testing-library/jest-dom": "^5.11.4",
