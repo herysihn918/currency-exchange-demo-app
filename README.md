@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Run `yarn install`
 
-Create `.env` file and Add the variable `REACT_APP_API_KEY` with your API key of [free currencyapi](https://freecurrencyapi.net/)
+Create `.env` file and Add the variable `REACT_APP_API_KEY` with your API key of [`free currencyapi`](https://freecurrencyapi.net/)
 
 ### Start Project
 
@@ -22,4 +22,4 @@ Run `yarn build`
 
 
 ## Demo Url
-[Click here](https://herysihn918.github.io/currency-exchange-demo-app/)
+[Click Here](https://herysihn918.github.io/currency-exchange-demo-app/)
