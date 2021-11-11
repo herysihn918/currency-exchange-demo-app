@@ -4,7 +4,7 @@ const API_KEY = process.env.REACT_APP_API_KEY
 
 function* getExchangeRates(action) {
     try {
-        const response = yield call (() => fetch(`https://api.exchangeratesapi.io/v1/latest?access_key=${API_KEY}&symbols=GBP,USD,EUR`))
+        const response = yield call (() => fetch(`http://api.exchangeratesapi.io/v1/latest?access_key=${API_KEY}&symbols=GBP,USD,EUR`))
         if (response.ok) {
             const json = yield call([response, 'json'])
             yield put({ type: 'NEW_EXCHANGE_RATES', data: json.rates })
