@@ -4,18 +4,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Install dependencies
 
-run `yarn install`
+Run `yarn install`
 
-### Create .env file and Add the variable 'REACT_APP_API_KEY' with your API key of exchangeratesapi.io
+Create `.env` file and Add the variable `REACT_APP_API_KEY` with your API key of [exchangeratesapi.io](https://exchangeratesapi.io/)
 
 ### Start Project
 
-run `yarn start`
+Run `yarn start`
 
 ## How to test the project
 
-run `yarn test`
+Run `yarn test`
 
 ## How to build the app
 
-run `yarn build`
+Run `yarn build`
