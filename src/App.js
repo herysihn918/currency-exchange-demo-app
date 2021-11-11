@@ -29,4 +29,12 @@ function App () {
     )
 }
 
-export default function () { return <Provider store={store}><App /></Provider> }
+function SuperApp () {
+    return (
+        <Provider store={store}>
+            <App />
+        </Provider>
+    )
+}
+
+export default SuperApp
