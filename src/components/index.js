@@ -9,7 +9,7 @@ export const LoadingScreen = () => {
     )
 }
 
-export const ExchangeController = ({}) => {
+export const ExchangeController = () => {
     const wallet = useSelector(state => state.wallet)
     const dispatch = useDispatch()
     
@@ -124,7 +124,7 @@ export const ExchangeCard = () => {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch({type: 'REQUEST_EXCHANGE_RATES'})
-    }, [])
+    }, [dispatch])
     return (
         <div className="card">
             <div className="card-header">

@@ -16,7 +16,7 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga)
 
-const App = () => {
+function App () {
     const { loading, error, message } = useSelector(state => state.saga)
     return (
         <>
@@ -26,7 +26,7 @@ const App = () => {
             { loading ? <LoadingScreen /> : null }
             { error ? <Notification message={message} /> : null}
         </>
-    );
+    )
 }
 
-export default () => <Provider store={store}><App /></Provider>
+export default function () { return <Provider store={store}><App /></Provider> }
